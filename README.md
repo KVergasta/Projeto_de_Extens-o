@@ -3,6 +3,14 @@
 
 Matéria: Programacao de Software Basico em C
 
+## Situação - Problema
+
+| Problema          |       Ideia         |       Solução                 |
+| -----------------  | ---------------------|-----------------------------|
+| Cadastro de clientes| Cadastrar e consultar os clientes de forma automática, assim irá mostrar quantas vezes o cliente já comprou no estabelecimento ||s |
+| Cadastro de fornecedores |Cadastrar e consultar quando solicitou o produto e qual é a sua reputação  |s|
+| Controle de estoque       | O software irá informar quando deve abastecer de acordo com a demanda e com o clim|s|
+
 
 
 ## objetvios sociocomunitários escolhido no plano de ensino
@@ -22,11 +30,4 @@ Examinar funções de entrada e saída em linguagem C, alicerçadas no vínculo 
 
 ­ Estruturar aplicações cliente/servidor, baseadas na API do soquete e nos protocolos de comunicação por rede mais utilizados, para praticar as técnicas de criação de sistemas distribuídos e de IoT.
 
-## Documentação de cores
-
-| Problema          |       Ideia         |       Solução                 |
-| -----------------  | ---------------------|-----------------------------|
-| Cadastro de clientes| Cadastrar e consultar os clientes de forma automática, assim irá mostrar quantas vezes o cliente já comprou no estabelecimento ||s |
-| Cadastro de fornecedores |Cadastrar e consultar quando solicitou o produto e qual é a sua reputação  |s|
-| Controle de estoque       | O software irá informar quando deve abastecer de acordo com a demanda e com o clim|s|
 
