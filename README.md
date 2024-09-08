@@ -1,2 +1,2 @@
-# Projeto_de_Extens-o
+# Projeto_de_Extensão
 Programacao de Software Basico em C
