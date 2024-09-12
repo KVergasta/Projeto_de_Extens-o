@@ -5,7 +5,7 @@ Matéria: Programacao de Software Basico em C
 IDE: VsCode
 ## Situação - Problema
 
-| Problema          |       Ideia         |       Solução                 | DESAFIOS|
+| PROBLEMA          |       IDEIA         |       SOLUÇÃO                 | DESAFIOS|
 | -----------------  | ---------------------|-----------------------------|----------|
 | Cadastro de clientes| Cadastrar e consultar os clientes de forma automática, assim irá mostrar quantas vezes o cliente já comprou no estabelecimento| s| Dfafa|
 | Cadastro de fornecedores |Cadastrar e consultar quando solicitou o produto e qual é a sua reputação  |s| D|
