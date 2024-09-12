@@ -13,14 +13,14 @@ IDE: VsCode
 
 
 
-## objetvios sociocomunitários escolhido no plano de ensino
+## objetivos sociocomunitários escolhido no plano de ensino
 Desenvolver estratégias, a partir de necessidades apresentadas pelas partes envolvidas, para contribuir para a eficiência e eficácia da economia colaborativa;
 
 Desenvolver software básico, baseando­se problemas levantados pelas partes envolvidas, para viabilizar maior interação entre moradores;
 
 Capacitar as partes envolvidas, com base nos procedimentos de operação para uso do software, para que haja uso adequado da solução proposta
 
-## objetvios escolhido no plano de ensino
+## objetivos escolhido no plano de ensino
 
 ­Aplicar bibliotecas e APIs para a linguagem C, baseadas na captura de eventos e interrupções do sistema operacional, para a construção de interfaces com o usuário e animações gráficas.
 
