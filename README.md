@@ -21,7 +21,7 @@ Examinar funções de entrada e saída em linguagem C, alicerçadas no vínculo 
 
 Empregar as regras de acesso ao hardware da linguagem C, baseadas em protocolos de comunicação serial, para a elaboração de soluções de controle de dispositivos e aquisição de dados em sistemas computacionais.| Capacitar as partes envolvidas, com base nos procedimentos de operação para uso do software, para que haja uso adequado da solução proposta|
 | Estruturar aplicações cliente/servidor, baseadas na API do soquete e nos protocolos de comunicação por rede mais utilizados, para praticar as técnicas de criação de sistemas distribuídos e de IoT.|
-## 
+
 
 
 
