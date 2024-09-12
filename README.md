@@ -7,7 +7,7 @@ IDE: VsCode
 
 | Problema          |       Ideia         |       Solução                 | DESAFIOS|
 | -----------------  | ---------------------|-----------------------------|----------|
-| Cadastro de clientes| Cadastrar e consultar os clientes de forma automática, assim irá mostrar quantas vezes o cliente já comprou no estabelecimento |s| |D|
+| Cadastro de clientes| Cadastrar e consultar os clientes de forma automática, assim irá mostrar quantas vezes o cliente já comprou no estabelecimento |s| |Dfafa|
 | Cadastro de fornecedores |Cadastrar e consultar quando solicitou o produto e qual é a sua reputação  |s| |D|
 | Controle de estoque       | O software irá informar quando deve abastecer de acordo com a demanda e com o clima |s| |D|
 
