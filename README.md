@@ -1,9 +1,9 @@
 
 # Projeto de extensão
 
-### Matéria: Programacao de Software Basico em C
+###📚 Matéria: Programacao de Software Basico em C
 
-### IDE: VsCode
+###💻 IDE: VsCode
 
 ## Introdução
 |  Objetivos|  Objetivos sociocomunitários|
