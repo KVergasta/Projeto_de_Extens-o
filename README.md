@@ -1,9 +1,12 @@
 
+
 # Projeto de extensão
 
-📚 ### Matéria: Programacao de Software Basico em C
+![college](https://github.com/user-attachments/assets/81d4538f-aac4-44f0-a8da-d46a470ae00b)
+Matéria: Programacao de Software Basico em C
 
-💻 ### IDE: VsCode
+![visual-studio](https://github.com/user-attachments/assets/d0cd41fa-5877-45bd-bc6f-57a913f12630)
+ IDE: VsCode 
 
 ## Introdução
 |  Objetivos|  Objetivos sociocomunitários|
