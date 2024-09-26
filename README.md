@@ -22,7 +22,7 @@ Examinar funções de entrada e saída em linguagem C, alicerçadas no vínculo 
 
 | PROBLEMA          |       IDEIA         |       SOLUÇÃO                 | DESAFIOS|
 | -----------------  | ---------------------|-----------------------------|----------|
-| Controle de estoque       | Será registrado todas as mercadorias do estabalecimento, para ter a noção do armazenamento e quando deve reabestacer |Criar um programa que leia, adicione e remova os itens|Se adequa a uma nova linguagem, assim como promover soluções efetivas para o problema em uma situação real|
+| Controle de estoque       | Será registrado todas as mercadorias do estabalecimento, para ter a noção do armazenamento e quando deve reabestacer |Criar um programa que leia, adicione e remova os itens|Se adequar a uma nova linguagem, assim como promover soluções efetivas para o problema em uma situação real ! |
 
 
 
