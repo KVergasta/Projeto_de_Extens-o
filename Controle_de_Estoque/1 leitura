@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX_LINHA 100
+
 
 int main() {
 
@@ -16,7 +16,7 @@ int main() {
 int leitura_arquivo(){
 
     FILE * file;
-    char linha[MAX_LINHA];
+    char linha[100];
 
     // Abre o file para leitura
     file = fopen("C:\\Users\\kauve\\Documents\\codes\\C\\projeto_extensao\\estoque.txt", "r");
@@ -28,8 +28,8 @@ int leitura_arquivo(){
     }
     
 
-    // Lê e imprime cada linha do file
-    while (fgets(linha, MAX_LINHA, file) != NULL) {
+    // Lê e imprime cada linha do file utilizando file get string, != NULL -> vai ser interrompido assim que não houver mais linha 
+    while (fgets(linha, 100, file) != NULL) {
         printf("%s", linha);
     }
 
