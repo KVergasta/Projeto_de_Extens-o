@@ -32,6 +32,7 @@ int main() {
     
     scanf("%d", &escolha_usuario);
 
+// o que fazer com cada escolha do usuário
     do
     {
         switch (escolha_usuario)
@@ -132,7 +133,7 @@ void ler_arquivo(){
     FILE * file;
     char linha_read[100];
 
-    // Abre o file para leitura, como pode ver, só vai ler o arquivo modificado (2_estoque)
+    // Abre o file para leitura, só vai ler o arquivo modificado (2_estoque)
     file = fopen("C:\\Users\\kauve\\Documents\\codes\\C\\projeto_extensao\\2_estoque.txt", "r");
 
     if (file == NULL)
@@ -167,15 +168,19 @@ int adicionar_item(void){
     printf("Tudo em letra minuscula !\n");
     printf("Sabor: ");
 
-    getchar(); // Limpa o buffer do teclado
+// Limpa o buffer do teclado
+    getchar(); 
 
-    fgets(sabor, sizeof(sabor), stdin); // Lê a string com fgets
-    sabor[strcspn(sabor, "\n")] = 0; // Remove a nova linha do final da string
+// Lê a string com fgets
+    fgets(sabor, sizeof(sabor), stdin); 
+
+// Remove a nova linha do final da string
+    sabor[strcspn(sabor, "\n")] = 0; 
 
     printf("Quantidade: ");
     scanf("%d", &quantidade);
 
-    // Escreve no arquivo
+// Escreve no arquivo com o formato "sabor - quantiade"
     if (fprintf(file, "%s - %d\n", sabor, quantidade) < 0) {
         printf("Erro ao escrever no arquivo.\n");
     } else{
@@ -189,6 +194,7 @@ int adicionar_item(void){
     return 0;
 }
 
+// essa função será usado como opção salvar, assim todas as modifições serão armazenadas, tendo o arquivo 1_estoque com reserva
 void copiar_arquivo(FILE *file2, FILE *file1){
 
     file2 = fopen("C:\\Users\\kauve\\Documents\\codes\\C\\projeto_extensao\\2_estoque.txt","r");
