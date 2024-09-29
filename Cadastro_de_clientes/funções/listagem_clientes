@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MAX_LINHA 100
+
+int main() {
+
+    int listar_clientes();
+    int lista_consumidores = listar_clientes();
+    printf(lista_consumidores);
+
+
+    return 0;
+}
+
+int listar_clientes(){
+
+    FILE * consumidores;
+    char linha[MAX_LINHA];
+
+    // Abre o consumidores para leitura
+    consumidores = fopen("C:\\Users\\kauve\\Documents\\codes\\C\\projeto_extensao\\cadastro_cliente.txt", "r");
+
+    if (consumidores == NULL)
+    {
+        sleep(1);
+        printf("O arquivo nao pode ser aberto\nPor favor, tente novamente.");
+        exit(0);
+    }
+    
+
+    // Lê e imprime cada linha do consumidores
+    while (fgets(linha, MAX_LINHA, consumidores) != NULL) {
+        printf("%s", linha);
+    }
+
+    // Fecha o consumidores
+    fclose(consumidores);
+
+    return 0;
+}
