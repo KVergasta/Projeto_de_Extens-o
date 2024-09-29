@@ -1,1 +1,237 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <string.h> 
 
+void ler_arquivo();
+int adicionar_item();
+void copiar_arquivo(FILE *file2, FILE *file1); // essa função criada para copiar os itens toda vez que foi adicionado no 1_estoque para o 2_estoque
+void deletar_item(FILE *file1, FILE *file2);
+
+int main() {
+
+    int escolha_usuario;
+
+    FILE*file1;
+    FILE*file2;
+
+
+    // cabeçalho
+    printf("| Aluno(a): Kauane Vergasta Silva Rodridrigues|\n");
+    printf("| Semestre: 2024.4                            |\n");
+    printf("| Curso: CiEncia da Computacao                |\n\n\n");
+
+// opções do suário
+    printf("|\n                          ESTOQUE                              |\n");
+    printf("|1 - Consulta de Estoque  2 - Adicionar   3 - Remover  4 - salvar |\n");
+    printf("|---------------------*************************-------------------|\n");
+    printf("|                          BANCO DE DADOS                         |\n");
+    printf("| 5 - Cadastro de Cliente          6 - Consulta de Clientes       |\n ");
+    printf("|---------------------*************************-------------------|\n");
+    printf("|                   0 - SAIR DO SISTEMA                           |\n\n ");
+    
+    scanf("%d", &escolha_usuario);
+
+    do
+    {
+        switch (escolha_usuario)
+        {
+            case 1:
+                // chamada da função para ler o arquivo
+                ler_arquivo();
+
+                printf("|\n                         ESTOQUE                                |\n");
+                printf("|1 - Consulta de Estoque  2 - Adicionar   3 - Remover  4 - salvar |\n");
+                printf("|--------------------*************************--------------------|\n");
+                printf("|                          BANCO DE DADOS                         |\n");
+                printf("| 5 - Cadastro de Cliente          6 - Consulta de Clientes       |\n ");
+                printf("|--------------------*************************--------------------|\n");
+                printf("|                   0 - SAIR DO SISTEMA                           |\n\n ");
+                
+
+                scanf("%d", &escolha_usuario);
+                break;
+
+            case 2:
+                adicionar_item();
+                
+                printf("|\n                         ESTOQUE                                |\n");
+                printf("|1 - Consulta de Estoque  2 - Adicionar   3 - Remover  4 - salvar |\n");
+                printf("|--------------------*************************--------------------|\n");
+                printf("|                          BANCO DE DADOS                         |\n");
+                printf("| 5 - Cadastro de Cliente          6 - Consulta de Clientes       |\n ");
+                printf("|--------------------*************************--------------------|\n");
+                printf("|                   0 - SAIR DO SISTEMA                           |\n\n ");
+
+
+                scanf("%d", &escolha_usuario);
+                break;
+            
+            case 3:
+
+
+                deletar_item(file1, file2);
+                
+                printf("|\n                        ESTOQUE                                |\n");
+                printf("|1 - Consulta de Estoque  2 - Adicionar   3 - Remover  4 - salvar |\n");
+                printf("|--------------------*************************--------------------|\n");
+                printf("|                          BANCO DE DADOS                         |\n");
+                printf("| 5 - Cadastro de Cliente          6 - Consulta de Clientes       |\n ");
+                printf("|--------------------*************************--------------------|\n");
+                printf("|                   0 - SAIR DO SISTEMA                           |\n\n ");
+                
+                scanf("%d", &escolha_usuario);
+                break;
+            
+            case 4:
+                
+                copiar_arquivo(file2, file1);
+
+                printf("|\n                        ESTOQUE                                |\n");
+                printf("|1 - Consulta de Estoque  2 - Adicionar   3 - Remover  4 - salvar |\n");
+                printf("|--------------------*************************--------------------|\n");
+                printf("|                          BANCO DE DADOS                         |\n");
+                printf("| 5 - Cadastro de Cliente          6 - Consulta de Clientes       |\n ");
+                printf("|--------------------*************************--------------------|\n");
+                printf("|                   0 - SAIR DO SISTEMA                           |\n\n ");
+            
+                scanf("%d", &escolha_usuario);
+                break;
+
+            case 0:
+                printf("Saindo do sistema...\n");
+                break;
+
+            
+
+            default:
+                printf("\nEscolha invalida.\n\n");
+
+                printf("|\n                        ESTOQUE                                |\n");
+                printf("|1 - Consulta de Estoque  2 - Adicionar   3 - Remover  4 - salvar |\n");
+                printf("|--------------------*************************--------------------|\n");
+                printf("|                          BANCO DE DADOS                         |\n");
+                printf("| 5 - Cadastro de Cliente          6 - Consulta de Clientes       |\n ");
+                printf("|--------------------*************************--------------------|\n");
+                printf("|                   0 - SAIR DO SISTEMA                           |\n\n ");
+
+
+
+                scanf("%d", &escolha_usuario);
+        }
+        
+    } while (escolha_usuario != 0); // condição de parada é o 0
+
+
+    return 0;
+}
+
+void ler_arquivo(){
+
+
+    FILE * file;
+    char linha_read[100];
+
+    // Abre o file para leitura, como pode ver, só vai ler o arquivo modificado (2_estoque)
+    file = fopen("C:\\Users\\kauve\\Documents\\codes\\C\\projeto_extensao\\2_estoque.txt", "r");
+
+    if (file == NULL)
+    {
+        printf("O arquivo nao pode ser aberto\nPor favor, tente novamente.");
+        exit(0);
+    }
+    
+
+    // Lê e imprime cada linha_read do file utilizando file get string, != NULL -> vai ser interrompido assim que não houver mais linha_read 
+    while (fgets(linha_read, 100, file) != NULL) {
+        printf("%s", linha_read);
+    }
+
+    // Fecha o file
+    fclose(file);
+
+}
+
+int adicionar_item(void){
+
+    FILE*file;
+    file = fopen("C:\\Users\\kauve\\Documents\\codes\\C\\projeto_extensao\\2_estoque.txt","a");
+    if (file == NULL){
+        printf("O arquivo nao pode ser aberto\nPor favor, tente novamente!");
+        getchar();
+        exit(1);
+    }
+    char sabor[400];
+    int quantidade;
+
+    printf("Tudo em letra minuscula !\n");
+    printf("Sabor: ");
+
+    getchar(); // Limpa o buffer do teclado
+
+    fgets(sabor, sizeof(sabor), stdin); // Lê a string com fgets
+    sabor[strcspn(sabor, "\n")] = 0; // Remove a nova linha do final da string
+
+    printf("Quantidade: ");
+    scanf("%d", &quantidade);
+
+    // Escreve no arquivo
+    if (fprintf(file, "%s - %d\n", sabor, quantidade) < 0) {
+        printf("Erro ao escrever no arquivo.\n");
+    } else{
+        printf("Adcionada com sucesso\n\n");
+    }
+    fclose(file);// Fecha o file
+
+
+
+
+    return 0;
+}
+
+void copiar_arquivo(FILE *file2, FILE *file1){
+
+    file2 = fopen("C:\\Users\\kauve\\Documents\\codes\\C\\projeto_extensao\\2_estoque.txt","r");
+    file1 = fopen("C:\\Users\\kauve\\Documents\\codes\\C\\projeto_extensao\\1_estoque.txt","w");
+
+    if (file2 == NULL){
+        printf("Erro ao abrir o arquivo");
+    }
+    
+    char leitor[1000];
+
+    while(fgets(leitor, 1000, file2)){
+        fputs(leitor, file1);
+    }
+    fclose(file1);
+    fclose(file2);
+}
+
+void deletar_item(FILE *file1, FILE *file2){
+
+    file1 = fopen("C:\\Users\\kauve\\Documents\\codes\\C\\projeto_extensao\\1_estoque.txt","r");
+
+    if (file1 == NULL){
+        printf("Erro ao abrir o arquivo");
+    }
+        
+    file2 = fopen("C:\\Users\\kauve\\Documents\\codes\\C\\projeto_extensao\\2_estoque.txt","w");
+
+    char leitor[1000];
+    char item_remove[400];
+
+    printf("Item que deseja excluir\n");
+    scanf("%s", item_remove);
+
+    while(fgets(leitor, 1000, file1)){
+        if (strstr(leitor, item_remove) == NULL)
+        {
+            fputs(leitor, file2);
+        }
+    }
+
+    printf("Item removido com sucesso");
+
+    fclose(file1);
+    fclose(file2);
+}
