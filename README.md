@@ -24,7 +24,7 @@ Examinar funções de entrada e saída em linguagem C, alicerçadas no vínculo 
 
 | PROBLEMA          |       IDEIA         |       SOLUÇÃO                 | DESAFIOS| PROBLEMAS DO PROTOTIPO|
 | -----------------  | ---------------------|-----------------------------|----------|
-| Controle de estoque       | Será registrado todas as mercadorias do estabalecimento, para ter a noção do armazenamento e quando deve reabestacer |Criar um programa que leia, adicione e remova os itens utilizando funções e manipulação de arquivo|Se adequar a uma nova linguagem, assim como promover soluções efetivas para o problema em uma situação real ! ||
+| Controle de estoque       | Será registrado todas as mercadorias do estabalecimento, para ter a noção do armazenamento e quando deve reabestacer |Criar um programa que leia, adicione e remova os itens utilizando funções e manipulação de arquivo|Se adequar a uma nova linguagem, assim como promover soluções efetivas para o problema em uma situação real ! |D|P|
 | Cadastro de clientes | Sera feito uma busca pelo cliente atraves do CPF| s | d |O cadastro de CPF só valida o tamnho, caso seja digitado uma letra é cadastrado da mesma forma|
 
 
