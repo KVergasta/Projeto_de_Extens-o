@@ -9,6 +9,7 @@ ht="40" />
 
 
 IDE: VsCode  
+![visual-studio](https://github.com/user-attachments/assets/e2968982-d671-4844-a1b4-665724cf77b7)
 ## Introdução
 
 |  Objetivos|  Objetivos sociocomunitários|
