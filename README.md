@@ -8,7 +8,7 @@ Matéria: Programacao de Software Basico em C <img align="left"  src="https://gi
 ht="40" /> 
 
 
-IDE: VsCode  <img align="left" width="40" height="40" src="[https://picsum.photos/100/100](https://github.com/user-attachments/assets/e2968982-d671-4844-a1b4-665724cf77b7)">
+IDE: VsCode  <img align="left" width="40" height="40" src="https://github.com/user-attachments/assets/e2968982-d671-4844-a1b4-665724cf77b7">
 
 ## Introdução
 
