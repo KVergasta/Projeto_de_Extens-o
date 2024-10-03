@@ -10,6 +10,7 @@ void deletar_item(FILE *file1, FILE *file2);
 void cadastro_cliente(); // cadastra o cpf e o nome do cliente
 int listar_clientes(); // mesma caracteristica da leitura do estoque
 void verifica_igual(FILE *file1, FILE *file2); // ira mostra itens duplicatos
+void consultar_cpf_cliente(FILE *file1, FILE *file2);
 
 int main() {
 
@@ -27,12 +28,13 @@ int main() {
 // opções do suário
     printf("========================    ESTOQUE     ==========================|\n");
     printf("|1 - Consulta de Estoque  2 - Adicionar   3 - Remover  4 - salvar |\n");
-    printf("|                       5 - Itens iguais                          |\n");
+    printf("|                      5 - Sabores Iguais                         |\n");
     printf("|======================   BANCO DE DADOS  ========================|\n");
-    printf("| 5 - Cadastro de Cliente          6 - Listar Clientes            |\n");
+    printf("| 6 - Cadastro de Cliente          7 - Consultar Clientes         |\n");
+    printf("|                      8 - Listar Clientes                        |\n");
     printf("| ================================================================|\n");
     printf("|                   0 - SAIR DO SISTEMA                           |\n\n ");
-    
+
     scanf("%d", &escolha_usuario);
 
     do
@@ -47,9 +49,10 @@ int main() {
 
                 printf("========================    ESTOQUE     ==========================|\n");
                 printf("|1 - Consulta de Estoque  2 - Adicionar   3 - Remover  4 - salvar |\n");
-                printf("|                       5 - Itens iguais                          |\n");
+                printf("|                      5 - Sabores Iguais                         |\n");
                 printf("|======================   BANCO DE DADOS  ========================|\n");
-                printf("| 6 - Cadastro de Cliente          7 - Listar Clientes            |\n");
+                printf("| 6 - Cadastro de Cliente          7 - Consultar Clientes         |\n");
+                printf("|                      8 - Listar Clientes                        |\n");
                 printf("| ================================================================|\n");
                 printf("|                   0 - SAIR DO SISTEMA                           |\n\n ");
 
@@ -64,9 +67,10 @@ int main() {
                 
                 printf("========================    ESTOQUE     ==========================|\n");
                 printf("|1 - Consulta de Estoque  2 - Adicionar   3 - Remover  4 - salvar |\n");
-                printf("|                       5 - Itens iguais                          |\n");
+                printf("|                      5 - Sabores Iguais                         |\n");
                 printf("|======================   BANCO DE DADOS  ========================|\n");
-                printf("| 6 - Cadastro de Cliente          7 - Listar Clientes            |\n");
+                printf("| 6 - Cadastro de Cliente          7 - Consultar Clientes         |\n");
+                printf("|                      8 - Listar Clientes                        |\n");
                 printf("| ================================================================|\n");
                 printf("|                   0 - SAIR DO SISTEMA                           |\n\n ");
                 scanf("%d", &escolha_usuario);
@@ -80,9 +84,10 @@ int main() {
                 
                 printf("========================    ESTOQUE     ==========================|\n");
                 printf("|1 - Consulta de Estoque  2 - Adicionar   3 - Remover  4 - salvar |\n");
-                printf("|                       5 - Itens iguais                          |\n");
+                printf("|                      5 - Sabores Iguais                         |\n");
                 printf("|======================   BANCO DE DADOS  ========================|\n");
-                printf("| 6 - Cadastro de Cliente          7 - Listar Clientes            |\n");
+                printf("| 6 - Cadastro de Cliente          7 - Consultar Clientes         |\n");
+                printf("|                      8 - Listar Clientes                        |\n");
                 printf("| ================================================================|\n");
                 printf("|                   0 - SAIR DO SISTEMA                           |\n\n ");
                 
@@ -97,9 +102,10 @@ int main() {
 
                 printf("========================    ESTOQUE     ==========================|\n");
                 printf("|1 - Consulta de Estoque  2 - Adicionar   3 - Remover  4 - salvar |\n");
-                printf("|                       5 - Itens iguais                          |\n");
+                printf("|                      5 - Sabores Iguais                         |\n");
                 printf("|======================   BANCO DE DADOS  ========================|\n");
-                printf("| 6 - Cadastro de Cliente          7 - Listar Clientes            |\n");
+                printf("| 6 - Cadastro de Cliente          7 - Consultar Clientes         |\n");
+                printf("|                      8 - Listar Clientes                        |\n");
                 printf("| ================================================================|\n");
                 printf("|                   0 - SAIR DO SISTEMA                           |\n\n ");
             
@@ -114,9 +120,10 @@ int main() {
 
                 printf("========================    ESTOQUE     ==========================|\n");
                 printf("|1 - Consulta de Estoque  2 - Adicionar   3 - Remover  4 - salvar |\n");
-                printf("|                       5 - Itens iguais                          |\n");
+                printf("|                      5 - Sabores Iguais                         |\n");
                 printf("|======================   BANCO DE DADOS  ========================|\n");
-                printf("| 6 - Cadastro de Cliente          7 - Listar Clientes            |\n");
+                printf("| 6 - Cadastro de Cliente          7 - Consultar Clientes         |\n");
+                printf("|                      8 - Listar Clientes                        |\n");
                 printf("| ================================================================|\n");
                 printf("|                   0 - SAIR DO SISTEMA                           |\n\n ");
             
@@ -131,9 +138,10 @@ int main() {
 
                 printf("========================    ESTOQUE     ==========================|\n");
                 printf("|1 - Consulta de Estoque  2 - Adicionar   3 - Remover  4 - salvar |\n");
-                printf("|                       5 - Itens iguais                          |\n");
+                printf("|                      5 - Sabores Iguais                         |\n");
                 printf("|======================   BANCO DE DADOS  ========================|\n");
-                printf("| 6 - Cadastro de Cliente          7 - Listar Clientes            |\n");
+                printf("| 6 - Cadastro de Cliente          7 - Consultar Clientes         |\n");
+                printf("|                      8 - Listar Clientes                        |\n");
                 printf("| ================================================================|\n");
                 printf("|                   0 - SAIR DO SISTEMA                           |\n\n ");
             
@@ -141,6 +149,23 @@ int main() {
                 break;
 
             case 7:
+                consultar_cpf_cliente(file1, file2);
+
+                sleep(1);
+
+                printf("========================    ESTOQUE     ==========================|\n");
+                printf("|1 - Consulta de Estoque  2 - Adicionar   3 - Remover  4 - salvar |\n");
+                printf("|                      5 - Sabores Iguais                         |\n");
+                printf("|======================   BANCO DE DADOS  ========================|\n");
+                printf("| 6 - Cadastro de Cliente          7 - Consultar Clientes         |\n");
+                printf("|                      8 - Listar Clientes                        |\n");
+                printf("| ================================================================|\n");
+                printf("|                   0 - SAIR DO SISTEMA                           |\n\n ");
+            
+                scanf("%d", &escolha_usuario);
+                break;
+
+            case 8:
                 
                 listar_clientes();
 
@@ -148,9 +173,10 @@ int main() {
 
                 printf("========================    ESTOQUE     ==========================|\n");
                 printf("|1 - Consulta de Estoque  2 - Adicionar   3 - Remover  4 - salvar |\n");
-                printf("|                       5 - Itens iguais                          |\n");
+                printf("|                      5 - Sabores Iguais                         |\n");
                 printf("|======================   BANCO DE DADOS  ========================|\n");
-                printf("| 6 - Cadastro de Cliente          7 - Listar Clientes            |\n");
+                printf("| 6 - Cadastro de Cliente          7 - Consultar Clientes         |\n");
+                printf("|                      8 - Listar Clientes                        |\n");
                 printf("| ================================================================|\n");
                 printf("|                   0 - SAIR DO SISTEMA                           |\n\n ");
             
@@ -169,11 +195,12 @@ int main() {
 
                 sleep(1);
 
-
                 printf("========================    ESTOQUE     ==========================|\n");
                 printf("|1 - Consulta de Estoque  2 - Adicionar   3 - Remover  4 - salvar |\n");
+                printf("|                      5 - Sabores Iguais                         |\n");
                 printf("|======================   BANCO DE DADOS  ========================|\n");
-                printf("| 5 - Cadastro de Cliente          6 - Listar Clientes            |\n");
+                printf("| 6 - Cadastro de Cliente          7 - Consultar Clientes         |\n");
+                printf("|                      8 - Listar Clientes                        |\n");
                 printf("| ================================================================|\n");
                 printf("|                   0 - SAIR DO SISTEMA                           |\n\n ");
 
@@ -247,7 +274,7 @@ int adicionar_item(void){
     scanf("%d", &quantidade);
 
     // Escreve no arquivo
-    if (fprintf(file, "%s - %d\n", sabor, quantidade) < 0) {
+    if (fprintf(file, "%s = %d\n", sabor, quantidade) < 0) {
         sleep(1);
         printf("Erro ao escrever no arquivo.\n");
     } else{
@@ -417,4 +444,42 @@ void verifica_igual(FILE *file1, FILE *file2){
     fclose(file2);
 
     return 0;
+}
+
+void consultar_cpf_cliente(FILE *file1, FILE *file2){
+
+    file1 = fopen("C:\\Users\\kauve\\Documents\\codes\\C\\projeto_extensao\\cadastro_cliente.txt","r");
+
+    if (file1 == NULL){
+        printf("Erro ao abrir o arquivo");
+    }
+    
+    file2 = fopen("C:\\Users\\kauve\\Documents\\codes\\C\\projeto_extensao\\consulta_cliente.txt","w");
+    
+    char leitor[1000];
+    char cpf[12];
+    
+    
+    getchar();
+
+    do{
+        printf(" * Apenas numeros * \n");
+        printf("CPF:\n");
+        fgets(cpf, sizeof(cpf), stdin); // Lê a string com fgets
+        cpf[strcspn(cpf, "\n")] = 0;
+    } while (strlen(cpf) != 11);
+
+    while(fgets(leitor, 1000, file1)){
+        if (strstr(leitor, cpf) != NULL)
+        {
+            printf(leitor, file2);
+            fputs(leitor, file2);
+            return 1;
+        } 
+    }
+
+    fclose(file1);
+    fclose(file2);
+
+    
 }
